@@ -1,0 +1,34 @@
+# Makefile for XPT2046 Touch Driver V3
+
+CXX = g++
+CXXFLAGS = -Wall -O3 -std=c++17
+LDFLAGS = -lrt -lpthread
+
+SOURCES = touch_xpt2046_v3.cpp touch_main_v3.cpp
+OBJECTS = $(SOURCES:.cpp=.o)
+TARGET = touch_main_v3
+
+all: $(TARGET)
+
+$(TARGET): $(OBJECTS)
+	@echo "[LINK] $@"
+	@$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+
+%.o: %.cpp
+	@echo "[CXX] $<"
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
+
+clean:
+	@echo "Cleaning touch driver..."
+	@rm -f $(OBJECTS) $(TARGET)
+
+install: $(TARGET)
+	@echo "Installing $(TARGET) to /usr/local/bin/"
+	@sudo cp $(TARGET) /usr/local/bin/
+	@sudo chmod +x /usr/local/bin/$(TARGET)
+
+uninstall:
+	@echo "Removing $(TARGET) from /usr/local/bin/"
+	@sudo rm -f /usr/local/bin/$(TARGET)
+
+.PHONY: all clean install uninstall

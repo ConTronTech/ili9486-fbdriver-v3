@@ -1,0 +1,73 @@
+# ── Build artifacts ───────────────────────────────────────────────────────────
+*.o
+
+# ── Logs / temp ───────────────────────────────────────────────────────────────
+*.log
+output.log
+
+# ── Old backups (not current work) ───────────────────────────────────────────
+Backups_Old/
+Apps (copy)/
+
+# ── Large media (videos + gif frames — not source) ───────────────────────────
+Apps/Video-Player/videos/
+Apps/Image-Viewer/gif/
+
+# ── Claude Code local settings ───────────────────────────────────────────────
+.claude/
+
+# ── Local-only files (not for repo) ──────────────────────────────────────────
+CLAUDE.md
+FIXES.md
+sync_to_pi.sh
+xpt2046-touchscreen-research.txt
+Apps/Image-Viewer/playgif.sh
+Apps/Image-Viewer/slideshow.sh
+
+# ── Editor artifacts ──────────────────────────────────────────────────────────
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── Compiled binaries ─────────────────────────────────────────────────────────
+# Driver daemons
+Drivers/fb_main_v3
+Drivers/touch_main_v3
+Drivers/audio_main_v3
+
+# Raycaster (active project)
+Apps/Raycaster/raycaster_v3
+
+# Other apps
+Apps/Spinning-Cube/spinning_cube_v3
+Apps/Image-Viewer/image_viewer_v3
+Apps/Video-Player/video_player_v3
+Apps/color_test_v3
+
+# Interactive apps
+Apps/Interactive/launcher
+Apps/Interactive/launcher_direct
+Apps/Interactive/settings_applet
+Apps/Interactive/task_manager_applet
+Apps/Interactive/weather_applet
+
+# Touch apps
+Apps/Touch/touch_calibrate_visual_v3
+Apps/Touch/touch_debugger_v3
+Apps/Touch/touch_draw_v3
+Apps/Touch-Calibrate/touch_calibrate_v3
+Apps/Touch-Calibrate/touch_calibrate_interactive_v3
+Apps/Touch-Test/test_single_dot
+Apps/Touch-Test/touch_direct_demo_v3
+Apps/Touch-Test/touch_test_v3
+Apps/Touch-Test/touch_ui_demo_v3
+
+# Legacy copies of the above
+Apps/Legacy/color_test_v3
+Apps/Legacy/Touch-Calibrate/touch_calibrate_v3
+Apps/Legacy/Touch-Calibrate/touch_calibrate_interactive_v3
+Apps/Legacy/Touch-Test/test_single_dot
+Apps/Legacy/Touch-Test/touch_direct_demo_v3
+Apps/Legacy/Touch-Test/touch_test_v3
+Apps/Legacy/Touch-Test/touch_ui_demo_v3
